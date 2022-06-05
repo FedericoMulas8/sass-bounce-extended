@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+.bg-random, .container .bounce {
+  background-color: #BA92A6;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -11,9 +15,12 @@
   align-items: center;
   justify-content: center;
 }
-
-.bg-random, .bounce {
-  background-color: #FD49FA;
+.container .bounce {
+  width: 20rem;
+  height: 20rem;
+  animation-name: bounced;
+  animation-duration: 1s;
+  border-radius: 50%;
 }
 
 @keyframes bounced {
@@ -26,13 +33,6 @@
   60% {
     transform: translateY(-15px);
   }
-}
-.bounce {
-  width: 20rem;
-  height: 20rem;
-  animation-name: bounced;
-  animation-duration: 1s;
-  border-radius: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

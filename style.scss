@@ -6,16 +6,26 @@
     margin: 0;
 }
 
+.bg-random {
+    background-color: random-hex();
+}
+
 .container {
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.bg-random {
-    background-color: random-hex();
+    .bounce {
+        @extend .bg-random;
+        width: 20rem;
+        height: 20rem;
+        animation-name: bounced;
+        animation-duration: 1s;
+        border-radius: 50%;
+    }
+    
 }
 
 @mixin bounce($start, $travel) {
@@ -30,12 +40,4 @@
 
 @include bounce(0px, -30px);
 
-.bounce {
-    @extend .bg-random;
-    width: 20rem;
-    height: 20rem;
-    animation-name: bounced;
-    animation-duration: 1s;
-    border-radius: 50%;
-}
 
